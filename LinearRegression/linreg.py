@@ -11,8 +11,14 @@ def summation(arr):
         s += x
     return s
 
+def regression(arr,xVals,slope,intercept):
+    i=0
+    for x in xVals:
+        arr[i] = slope*x + intercept
+        i += 1
 
-dataset = pd.read_csv("C:\\Users\\My PC\\Documents\\3rd Yr 2nd Sem\\Math 124\\data.csv")
+
+dataset = pd.read_csv("C:\\Users\\Ethan Ray Mosqueda\\PycharmProjects\\EMain\\LinearRegression\\data.csv")
 print("Dataset: ")
 print(dataset)
 x = np.array(dataset['x'])
@@ -26,6 +32,10 @@ slope, intercept, r_value, p_value, std_err = stats.linregress(x,y)
 print("x bar: ", sumX)
 print("y bar: ", sumY)
 print("regression model: f(x) = ",slope,"x + ",intercept)
+yhat = np.array(len(y));
+yhat = regression(yhat,x,slope,intercept)
+print("yhat: ")
+print(yhat)
 
 plt.scatter(x, y, color="black")
 plt.plot(x, x*slope+intercept, 'blue')
