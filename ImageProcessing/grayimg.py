@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-img  =  cv2.imread('C:\\Users\\Ethan Ray Mosqueda\\PycharmProjects\\EMain\\ImageProcessing\\subaru.jpg', 0)
+img  =  cv2.imread('C:\\Users\\Ethan Ray Mosqueda\\PycharmProjects\\EMain\\ImageProcessing\\img\\subaru.jpg', 0)
 # cv2.IMREAD_GRAYSCALE
 # IMREAD_GRAYSCALE = 0
 # IMREAD_COLOR = 1
@@ -16,4 +16,4 @@ cv2.destroyAllWindows()
 # plt.imshow(img, cmap="gray", interpolation="bicubic")
 # plt.show()
 
-cv2.imwrite('C:\\Users\\Ethan Ray Mosqueda\\PycharmProjects\\EMain\\ImageProcessing\\cargray.png', img)
+cv2.imwrite('C:\\Users\\Ethan Ray Mosqueda\\PycharmProjects\\EMain\\ImageProcessing\\img\\cargray.png', img)
